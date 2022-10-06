@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/coopKronoparken"
+    android:layout_marginTop="18dp"
+    android:background="@color/dashboard_color"
+    app:circularflow_defaultRadius="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="150sp"
+        android:layout_height="130sp"
+        app:cardBackgroundColor="@color/dashboard_color"
+        app:cardCornerRadius="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2sp"
+            android:src="@drawable/coopkronoparken">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginLeft="16sp"
+        app:cardBackgroundColor="@color/dashboard_color"
+        app:cardCornerRadius="16sp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="40sp"
+            android:paddingLeft="0sp"
+            android:paddingTop="16sp"
+            android:paddingEnd="16sp"
+            android:paddingRight="16sp"
+            android:paddingBottom="16sp">
+
+            <TextView
+                android:id="@+id/distanceToCoopKronoparken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.6 km"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textTitleLidl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:layout_marginRight="8sp"
+                android:paddingLeft="99dp"
+                android:text="Coop Kronoparken"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/distanceToCoopKronoparken"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="99dp"
+                app:layout_constraintEnd_toStartOf="@id/distanceToCoopKronoparken"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Öppet idag 08:00-21:00"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="37dp"
+                android:paddingLeft="99dp"
+                app:layout_constraintEnd_toStartOf="@id/distanceToCoopKronoparken"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="32 erbjudanden"
+                android:textSize="12sp"
+                android:textColor="@color/offers_text"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
