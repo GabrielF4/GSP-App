@@ -1,4 +1,4 @@
-package com.example.gsp_app;
+package com.example.notespro;
 
 import android.os.Bundle;
 
