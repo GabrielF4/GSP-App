@@ -8,4 +8,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="card_background">#FAFAFA</color>
+    <color name="dashboard_color">@color/white</color>
+    <color name="primary_text">#565B65</color>
+    <color name="secondary_text">#9B9A9D</color>
+    <color name="offers_text">#D2001A</color>
+    <color name="stores_background">#2C3333</color>
+
+
 </resources>

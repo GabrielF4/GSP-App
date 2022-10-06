@@ -43,12 +43,13 @@ public class LoginActivity extends AppCompatActivity {
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
 
-        boolean isValidated = validateData(email,password);
-        if(!isValidated){
+        boolean isValidated = validateData(email, password);
+        if(!isValidated) {
             return;
         }
-
-        loginAccountInFirebase(email,password);
+        else {
+            loginAccountInFirebase(email,password);
+        }
     }
 
     void loginAccountInFirebase(String email, String password){
@@ -58,17 +59,18 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 changeInProgress(false);
-                if(task.isSuccessful()){
+                if(task.isSuccessful()) {
                     //Login was successful
-                    if(firebaseAuth.getCurrentUser().isEmailVerified()) {
-                        //Go to main activity
-                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                   // if(firebaseAuth.getCurrentUser().isEmailVerified()) {
+                        // Go to main activity
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
-                    }else {
-                        Utility.showToast(LoginActivity.this, "Email not verified, Please verify your email.");
+                   // } else {
+                        //Utility.showToast(LoginActivity.this, "Email not verified, Please verify your email.");
                     }
 
-                }else {
+              //  }
+                else {
                     //Login failed
                     System.out.println("Login failed...");
                     Utility.showToast(LoginActivity.this, task.getException().getLocalizedMessage());
@@ -81,15 +83,14 @@ public class LoginActivity extends AppCompatActivity {
         if(!inProgress) {
             progressBar.setVisibility(View.VISIBLE);
             loginBtn.setVisibility(View.GONE);
-        }else {
+        } else {
             progressBar.setVisibility(View.GONE);
             loginBtn.setVisibility(View.VISIBLE);
         }
     }
 
+    // Validates data from the user
     boolean validateData(String email, String password) {
-        //Validate the data from the user
-
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             emailEditText.setError("Email is invalid");
             return false;
