@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Hem"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/home"/>
+    <item android:title="Sök butik"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:id="@+id/search"/>/>
+    <item android:title="Jämför"
+        android:icon="@drawable/ic_baseline_compare_24"
+        android:id="@+id/compare"/>/>
+    <item android:title="Inköpslista"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:id="@+id/list_bulleted"/>/>
+</menu>
